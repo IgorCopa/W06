@@ -32,13 +32,17 @@
             <td>snow</td>
             <td>boots</td>
         </tr>
+        <tr>
+            <td>others</td>
+            <td>shoes</td>
+        </tr>
     </table>
 
     <div>
         <p>What's the Weather like?</p>
         <input type="text" id="iptWeather" placeholder="hot, raining or snowing..." autofocus>
         <button type="button" id="btnResult">Result</button>
-        <p id="output"></p>
+        <div id="output"></div>
     </div>
 
     <script>
@@ -47,18 +51,18 @@
 
         function footWear() {
             let inputElement = document.getElementById('iptWeather').value.toLowerCase();
-            let pOutputelement = document.getElementById('output');
+            let divOutputElement = document.getElementById('output');
             if((inputElement == 'hot') || (inputElement == 'warm')) {
-                pOutputelement.innerHTML = 'sandals';
+                divOutputElement.innerHTML = 'sandals';
                 document.getElementById('iptWeather').value = '';
             } else if((inputElement == 'rain') || (inputElement == 'rainy') || (inputElement == 'raining')) {
-                pOutputelement.innerHTML = 'galoshes';
+                divOutputElement.innerHTML = 'galoshes';
                 document.getElementById('iptWeather').value = '';
             } else if((inputElement == 'snow') || (inputElement == 'snowing') || (inputElement == 'snowy')) {
-                pOutputelement.innerHTML = 'boots';
+                divOutputElement.innerHTML = 'boots';
                 document.getElementById('iptWeather').value = '';
             } else {
-                pOutputelement.innerHTML = 'shoes';
+                divOutputElement.innerHTML = 'shoes';
                 document.getElementById('iptWeather').value = '';
             }
         }
